@@ -17,7 +17,7 @@ program.version('1.0.1', '-v, --version')
 .action((name) => {
 	inquirer.prompt([
 		{type: 'input', name: 'author', message: '请输入作者名称',default: "lucy" },
-		{type: 'input', name: 'description', message: '请输入项目描述', default: ''}
+		{type: 'input', name: 'description', message: '请输入项目描述', default: 'a vue`s project'}
 	]).then((answers) => {
 		const spinner = ora('正在下载模板...');
 		spinner.start();
@@ -27,7 +27,7 @@ program.version('1.0.1', '-v, --version')
 			author: answers.author
 		};
 		// 下载模版 第一个参数：github:owner/repoName 第二个参数：模板放置的文件夹
-		download('github:Lucy20209060/Lucy20209060.github.io', name, function (err) {
+		download('github:Lucy20209060/vue-template', name, function (err) {
 			if(err){
 				spinner.fail();
         console.log(symbols.error, chalk.red(err));
