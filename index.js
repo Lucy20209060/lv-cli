@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // 可以自动的解析命令和参数，用于处理用户输入的命令
 const program = require('commander');
 // 下载文件
